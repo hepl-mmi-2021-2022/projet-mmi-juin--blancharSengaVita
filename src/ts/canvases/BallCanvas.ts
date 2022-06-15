@@ -10,14 +10,23 @@ export class BallCanvas {
         this.canvasElement = canvasElement;
         this.ctx = ctx;
 
-        this.resizeCanvas()
-
         this.ball = new Ball(this.canvasElement, this.ctx);
+
+        this.resizeCanvas()
+        this.addEventListeners()
     }
 
     resizeCanvas() {
         this.canvasElement.width = window.innerWidth;
         this.canvasElement.height = window.innerHeight;
+        this.ball.draw();
+    }
+
+    addEventListeners() {
+        addEventListener('resize', ()=>{
+            this.resizeCanvas();
+        })
+
     }
 }
 

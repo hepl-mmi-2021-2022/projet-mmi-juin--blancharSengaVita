@@ -10,4 +10,3 @@ class Main {
 }
 
 new Main();
-//c'est un texte juste pour deranger théo (il voulait plus que je tape dans ce fichier)
